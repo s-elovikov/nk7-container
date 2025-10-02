@@ -1,0 +1,19 @@
+{
+  "unity": "2020.4", 
+  "name": "com.nk7.container",
+  "version": "1.0.0",
+  "dependencies": {
+  }, 
+  "author": {
+    "name": "Nk7", 
+    "url": "https://github.com/lsd7nk"
+  }, 
+  "keywords": [
+    "DI", 
+    "Dependency Injection",
+    "Injection",
+    "Code Injection"
+  ],
+  "displayName": "Nk7 DI Container", 
+  "description": "Lightweight dependency inversion container"
+}
