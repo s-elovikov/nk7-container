@@ -6,4 +6,9 @@ namespace Nk7.Container
     {
         TService GetService(Type serviceType);
     }
+    
+    public interface IFactoryService
+    {
+        TService GetService<TService>(Type serviceType);
+    }
 }
