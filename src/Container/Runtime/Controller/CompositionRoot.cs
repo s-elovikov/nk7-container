@@ -7,6 +7,8 @@ namespace Nk7.Container
     [DefaultExecutionOrder(-7000)]
     public sealed class CompositionRoot : MonoBehaviour
     {
+        private const int RESERVE_MEGABYTES_COUNT = 10;
+
         public static CompositionRoot Instance;
         private CompositionRoot[] _objects;
 
@@ -75,6 +77,8 @@ namespace Nk7.Container
 
         private void Awake()
         {
+            NativeHeapUtils.ReserveMegabytes(RESERVE_MEGABYTES_COUNT);
+
 #pragma warning disable CS0618 // Type or member is obsolete
             _objects = FindObjectsOfType<CompositionRoot>();
 #pragma warning restore CS0618 // Type or member is obsolete
