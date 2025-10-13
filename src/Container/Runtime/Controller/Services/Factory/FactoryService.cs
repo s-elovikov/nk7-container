@@ -15,5 +15,5 @@ namespace Nk7.Container
         {
             return (TService)_container.Resolve(serviceType);
         }
-    }
+	}
 }
