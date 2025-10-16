@@ -1,5 +1,3 @@
-using System;
-
 namespace Nk7.Container
 {
     public abstract class AbstractFactoryService : IFactoryService
@@ -11,6 +9,6 @@ namespace Nk7.Container
             _container = container;
         }
 
-        public abstract TService GetService<TService>(Type serviceType);
+        public abstract TService GetService<TService>();
 	}
 }

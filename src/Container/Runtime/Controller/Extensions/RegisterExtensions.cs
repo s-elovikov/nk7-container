@@ -7,6 +7,21 @@ namespace Nk7.Container
     public static class RegisterExtensions
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void RegisterAbstractFactory<TService, TImplementation>(this IBaseDIService diService)
+            where TImplementation : IFactoryService, TService
+        {
+            var registration = new DescriptorRegistration();
+
+            registration.RegistrationType = RegistrationType.Default;
+            registration.ImplementationType = typeof(TImplementation);
+            registration.LifeType = ServiceLifeType.Singleton;
+
+            registration.As<TService>();
+
+            diService.Register(registration);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void RegisterFactory<TService>(
             this IBaseDIService diService, IDIContainer container)
         {
