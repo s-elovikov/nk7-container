@@ -17,6 +17,7 @@ namespace Nk7.Container
         {
             var container = new DIContainer(_descriptorRegistrations);
 
+            this.RegisterInstance<IDIContainer>(container);
             this.RegisterInstance<IContainerLifeCycle>(container);
             this.RegisterInstance(new ScopeService(container))
                 .AsImplementedInterfaces();
