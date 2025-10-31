@@ -9,7 +9,7 @@ Lightweight DI container for Unity built around a static `CompositionRoot`, focu
 - Prefab and factory support (`RegisterComponent`, `RegisterFactory`, `RegisterAbstractFactory`)
 - Scope management via `IScopeService` and resource disposal
 - Application and scene lifecycle events exposed through `IContainerLifeCycle`
-- Editor utilities: container creation menu, `DefaultExecutionOrder` setup, automatic `NK7_CONTAINER` define
+- Editor utilities: container creation menu, `DefaultExecutionOrder` setup
 
 ## Contents
 - [Installation](#installation)
@@ -276,7 +276,6 @@ For manual cleanup use `IDIContainer.Release<T>()`, `Release(Type)`, and `Releas
 ## Editor Tools and Utilities
 
 - `Tools → Nk7 → Container` contains commands for quickly creating `CompositionRoot` and `SubContainer`.
-- The editor automatically adds the `NK7_CONTAINER` scripting define for the main platforms.
 - `ScriptOrderUtils` synchronizes `DefaultExecutionOrder` values so containers initialize before user scripts.
 - On IL2CPP platforms the container reserves a small memory block via `NativeHeapUtils.ReserveMegabytes` to reduce startup allocations.
 - `LogsUtils` provides colored wrappers around `Debug.Log*` for container messages.

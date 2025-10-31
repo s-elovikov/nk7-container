@@ -9,7 +9,7 @@
 - Работа с префабами и фабриками (`RegisterComponent`, `RegisterFactory`, `RegisterAbstractFactory`)
 - Управление областями видимости через `IScopeService` и освобождение ресурсов
 - События жизненного цикла приложения и сцен, доступные через `IContainerLifeCycle`
-- Утилиты редактора: меню создания контейнеров, расстановка `DefaultExecutionOrder`, автодобавление define `NK7_CONTAINER`
+- Утилиты редактора: меню создания контейнеров, расстановка `DefaultExecutionOrder`
 
 ## Содержание
 - [Установка](#установка)
@@ -276,7 +276,6 @@ public class SceneLogger
 ## Инструменты редактора и утилиты
 
 - `Tools → Nk7 → Container` содержит команды для быстрого создания `CompositionRoot` и `SubContainer`.
-- В редакторе автоматически добавляется скриптовый define `NK7_CONTAINER` для основных платформ.
 - `ScriptOrderUtils` синхронизирует значения `DefaultExecutionOrder`, чтобы контейнеры инициализировались до пользовательских скриптов.
 - На платформах IL2CPP контейнер резервирует небольшой блок памяти через `NativeHeapUtils.ReserveMegabytes`, снижая вероятность аллокаций при старте.
 - `LogsUtils` предоставляет цветные обёртки вокруг `Debug.Log*` для сообщений контейнера.
