@@ -63,7 +63,7 @@ namespace Nk7.Container
         {
             if (InterfacesTypes == null)
             {
-                InterfacesTypes = new List<Type>();
+                InterfacesTypes = new List<Type>(interfaceTypes.Length);
             }
 
             for (int i = 0; i < interfaceTypes.Length; ++i)
