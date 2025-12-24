@@ -35,7 +35,7 @@ Lightweight DI container for Unity built around a static `CompositionRoot`, focu
 
 1. Open Unity Package Manager (`Window → Package Manager`).
 2. Click `+ → Add package from git URL…`.
-3. Enter `https://github.com/lsd7nk/nk7-container.git?path=/src/Container`.
+3. Enter `https://github.com/s-elovikov/nk7-container.git?path=/src/Container`.
 
 UPM packages pulled from Git are not updated automatically, so refresh the URL manually when needed.  
 Alternatively, use the [UPM Git Extension](https://github.com/mob-sakai/UpmGitExtension).
